@@ -1,1 +1,1 @@
-export const BASE_URL  = "https://vibe-spheres-chi.vercel.app/api";
+export const BASE_URL = 'https://vibe-spheres-chi.vercel.app/api';
