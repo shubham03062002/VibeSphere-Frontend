@@ -1,0 +1,429 @@
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #f3f3f3;
+  border-left: 1px solid #ddd;
+}
+
+/* ---------- Header ---------- */
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.chat-header img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+/* ---------- Messages ---------- */
+
+.messages {
+  flex-grow: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.msg {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.msg.mine {
+  background: #d1f5d3;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+.msg.their {
+  background: white;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+.msg-text {
+  font-size: 14px;
+  margin: 0;
+}
+
+.msg-time {
+  font-size: 11px;
+  color: gray;
+  display: block;
+  text-align: right;
+  margin-top: 5px;
+}
+
+/* ---------- Input Bar ---------- */
+
+.input-bar {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: white;
+  border-top: 1px solid #ddd;
+}
+
+.input-bar input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.input-bar button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.input-bar button:hover {
+  background: #43a047;
+}
+
+/* ---------- Layout ---------- */
+
+.chat-list-container {
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid #ddd;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-list-title {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+  background: #fafafa;
+}
+
+/* ---------- Chat List ---------- */
+
+.chat-list {
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chat-item:hover {
+  background: #f0f0f0;
+}
+
+/* ---------- Profile Image ---------- */
+
+.chat-item img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ---------- Text ---------- */
+
+.chat-info h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.chat-info p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* ---------- Scrollbar ---------- */
+
+.chat-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-list::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 20px;
+}
+
+
+
+
+/* ========== MAIN PAGE LAYOUT ========== */
+.chat-page {
+  display: flex;
+  height: 100vh;
+  background: #f7f7f8;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* Sidebar */
+.chat-sidebar {
+  width: 28%;
+  border-right: 1px solid #ddd;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat Window */
+.chat-main {
+  flex: 1;
+  background: #f0f2f5; /* WhatsApp gray */
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* ========== CHAT LIST ========== */
+
+.chat-list-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-list-title {
+  padding: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
+}
+
+.chat-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.chat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.chat-item:hover {
+  background: #f2f2f2;
+}
+
+.chat-item img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.chat-info h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.chat-info p {
+  margin: 0;
+  font-size: 13px;
+  color: #777;
+}
+
+
+
+/* ========== CHAT WINDOW ========== */
+
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Message Area */
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Bubble Styles */
+.msg {
+  max-width: 60%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 15px;
+  line-height: 1.4;
+  position: relative;
+}
+
+.mine {
+  align-self: flex-end;
+  background: #d1f9d3;
+  border-bottom-right-radius: 4px;
+}
+
+.their {
+  align-self: flex-start;
+  background: #ffffff;
+  border-bottom-left-radius: 4px;
+  border: 1px solid #e5e5e5;
+}
+
+/* Time */
+.msg span {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+  color: #666;
+  text-align: right;
+}
+
+
+
+/* ========== INPUT BAR ========== */
+
+.input-bar {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.input-bar input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 22px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 15px;
+}
+
+.input-bar input:focus {
+  border-color: #0095f6;
+}
+
+.input-bar button {
+  padding: 10px 20px;
+  background: #0095f6;
+  border: none;
+  border-radius: 22px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+}
+
+.input-bar button:hover {
+  background: #0077cc;
+}
+
+
+
+/* Scrollbars */
+.messages::-webkit-scrollbar,
+.chat-list::-webkit-scrollbar {
+  width: 7px;
+}
+
+.messages::-webkit-scrollbar-thumb,
+.chat-list::-webkit-scrollbar-thumb {
+  background: #cfcfcf;
+  border-radius: 20px;
+}
+
+
+/* STyling for Status */
+
+.status-container {
+  padding: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.my-status, .status-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.circle {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 2px solid #25D366;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.status-list h4 {
+  margin-top: 20px;
+  color: gray;
+}
+
+.status-viewer {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-image {
+  max-height: 90%;
+  max-width: 90%;
+}
+
+.status-text {
+  position: absolute;
+  bottom: 50px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
